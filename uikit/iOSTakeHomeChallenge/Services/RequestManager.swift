@@ -8,5 +8,11 @@
 import Foundation
 
 protocol RequestManagerProtocol {
-    func fetch()
+    func fetch(_ request: RequestProtocol)
+}
+
+class RequestManager: RequestManagerProtocol {
+    func fetch(_ request: RequestProtocol) {
+        
+    }
 }

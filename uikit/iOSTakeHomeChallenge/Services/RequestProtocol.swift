@@ -23,7 +23,22 @@ extension RequestProtocol {
     }
     
     func createURLRequest() throws -> URLRequest {
-        return URLRequest()
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = path
+
+        guard let url = components.url
+        else { throw NetworkError.invalidUrl }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = requestType.rawValue
+
+          if !headers.isEmpty {
+              urlRequest.allHTTPHeaderFields = headers
+          }
+        
+        return urlRequest
     }
 }
 
