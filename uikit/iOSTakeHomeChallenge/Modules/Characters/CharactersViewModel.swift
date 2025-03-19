@@ -12,9 +12,13 @@ protocol CharactersViewModelProtocol {
 }
 
 class CharactersViewModel {
+    @Inject(\.requestManager) var requestManager: RequestManagerProtocol
     var characters: [Character] = []
 
     func getCharacters() {
+        let requestData = CharactersRequestProtocol.charactersList
+        requestManager.fetch(requestData) { result in
+            print("dzk result \(result)")
+        }
     }
-
 }

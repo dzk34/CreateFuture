@@ -16,6 +16,7 @@ enum APIConstants {
 public enum NetworkError: LocalizedError {
     case failedResponse
     case invalidUrl
+    case canNotParseData
     case invalidServerResponse
 
     public var customMessage: String {
@@ -24,6 +25,8 @@ public enum NetworkError: LocalizedError {
             return "Error: Failed response"
         case .invalidUrl:
             return "Error: invalid URL"
+        case .canNotParseData:
+            return "Error: cannot parse data"
         case .invalidServerResponse:
             return "Error: invalid server response"
         }
