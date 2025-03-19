@@ -3,16 +3,16 @@
 import Foundation
 import UIKit
 
-class CharactersViewController: UIViewController, UITableViewDataSource {
-    @IBOutlet var tableView: UITableView!
-
+class CharactersViewController: UIViewController {
     @Inject(\.charactersViewModel) var viewModel: CharactersViewModel
+    @IBOutlet weak var tableView: UITableView!
 
     var cachedCharacters: [Character] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .dark
+        viewModel.getCharacters()
     }
 
 
@@ -22,7 +22,9 @@ class CharactersViewController: UIViewController, UITableViewDataSource {
             self?.tableView.reloadData()
         }
     }
+}
 
+extension CharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cachedCharacters.count
     }

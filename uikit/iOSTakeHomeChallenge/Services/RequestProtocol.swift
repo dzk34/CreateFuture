@@ -13,6 +13,20 @@ protocol RequestProtocol {
     var requestType: RequestType { get }
 }
 
+extension RequestProtocol {
+    var host: String {
+        APIConstants.host
+    }
+    
+    var scheme: String {
+        APIConstants.scheme
+    }
+    
+    func createURLRequest() throws -> URLRequest {
+        return URLRequest()
+    }
+}
+
 enum RequestType: String {
     case get
     case post

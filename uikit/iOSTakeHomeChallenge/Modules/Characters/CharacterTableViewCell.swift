@@ -3,11 +3,11 @@
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var cultureLabel: UILabel!
-    @IBOutlet var bornLabel: UILabel!
-    @IBOutlet var diedLabel: UILabel!
-    @IBOutlet var seasonLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cultureLabel: UILabel!
+    @IBOutlet weak var bornLabel: UILabel!
+    @IBOutlet weak var diedLabel: UILabel!
+    @IBOutlet weak var seasonLabel: UILabel!
 
     func setupWith(character: Character) {
         selectionStyle = .none
@@ -18,7 +18,7 @@ class CharacterTableViewCell: UITableViewCell {
 
         var seasons = ""
 
-        for season in character.tvSeries {
+        for season in character.tvSeries { //improve
             if season == "Season 1" {
                 seasons.append("I ")
             } else if season == "Season 2" {
