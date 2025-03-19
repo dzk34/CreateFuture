@@ -1,0 +1,19 @@
+//
+//  ServiceContainer.swift
+//  iOSTakeHomeChallenge
+//
+//  Created by Khaled on 19/03/2025.
+//
+
+import Foundation
+
+private struct CharactersViewModelKey: InjectedServiceKey {
+    static var currentValue: CharactersViewModel = CharactersViewModel()
+}
+
+extension InjectedServiceValues {
+    var charactersViewModel: CharactersViewModel {
+        get { Self[CharactersViewModelKey.self] }
+        set { Self[CharactersViewModelKey.self] = newValue }
+    }
+}
