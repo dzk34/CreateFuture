@@ -11,7 +11,7 @@ enum CharactersRequestProtocol: RequestProtocol {
     case charactersList
 
     var path: String {
-        "characters"
+        "/characters"
     }
     
     var headers: [String : String] {
