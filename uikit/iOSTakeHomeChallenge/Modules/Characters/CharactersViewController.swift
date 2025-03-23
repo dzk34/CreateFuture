@@ -21,7 +21,9 @@ class CharactersViewController: UIViewController {
                         self?.loadData(characters: characters)
                     }.store(in: &cancellables)
         
-        viewModel.getCharacters()
+        Task.init {
+            await viewModel.getCharacters()
+        }
     }
 
 

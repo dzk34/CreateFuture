@@ -8,13 +8,25 @@
 import Foundation
 
 protocol RequestManagerProtocol {
+    // closure based
     func fetch(_ request: RequestProtocol, completionHandler: @escaping (_ result: Result<[Character], NetworkError>) -> Void)
+    
+    // async/await based
+    func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T
 }
 
 class RequestManager: RequestManagerProtocol {
-    
-    func fetch(_ request: RequestProtocol, completionHandler: @escaping (_ result: Result<[Character], NetworkError>) -> Void) {
+    @Inject(\.apiManager) var apiManager: APIManagerProtocol
+    @Inject(\.dataParser) var dataParser: DataParserProtocol
 
+    func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T {
+        let data = try await apiManager.perform(request)
+        
+        let decoded: T = try dataParser.parse(data: data)
+        return decoded
+    }
+
+    func fetch(_ request: RequestProtocol, completionHandler: @escaping (_ result: Result<[Character], NetworkError>) -> Void) {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 15
 
