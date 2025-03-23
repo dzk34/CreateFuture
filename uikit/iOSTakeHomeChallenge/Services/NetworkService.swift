@@ -16,6 +16,7 @@ enum APIConstants {
 public enum NetworkError: LocalizedError {
     case failedResponse
     case invalidUrl
+    case invalidRequest
     case canNotParseData
     case invalidServerResponse
 
@@ -25,6 +26,8 @@ public enum NetworkError: LocalizedError {
             return "Error: Failed response"
         case .invalidUrl:
             return "Error: invalid URL"
+        case .invalidRequest:
+            return "Invalid request"
         case .canNotParseData:
             return "Error: cannot parse data"
         case .invalidServerResponse:

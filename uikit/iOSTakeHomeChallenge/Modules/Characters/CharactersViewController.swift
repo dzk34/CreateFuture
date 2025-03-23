@@ -2,9 +2,12 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class CharactersViewController: UIViewController {
     @Inject(\.charactersViewModel) var viewModel: CharactersViewModel
+    private var cancellables: Set<AnyCancellable> = []
+    
     @IBOutlet weak var tableView: UITableView!
 
     var cachedCharacters: [Character] = []
@@ -12,12 +15,19 @@ class CharactersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .dark
+        
+        viewModel.$characters
+                    .sink { [weak self] characters in
+                        self?.loadData(characters: characters)
+                    }.store(in: &cancellables)
+        
         viewModel.getCharacters()
     }
 
 
     func loadData(characters: [Character]) {
         cachedCharacters = characters
+        
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
