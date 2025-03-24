@@ -33,6 +33,9 @@ class CharactersViewController: UIViewController, UISearchControllerDelegate {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.searchTextField.tintColor = .white
+        searchController.searchBar.searchTextField.backgroundColor = .lightGray
         
         navigationItem.searchController = searchController
         definesPresentationContext = false
