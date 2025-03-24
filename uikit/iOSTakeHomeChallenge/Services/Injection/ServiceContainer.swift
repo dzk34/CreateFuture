@@ -29,8 +29,6 @@ private struct URLSessionKey: InjectedServiceKey {
     static var currentValue: URLSession = URLSession.shared
 }
 
-// MARK: Injected Mocked Services
-
 
 extension InjectedServiceValues {
     var charactersViewModel: CharactersViewModel {

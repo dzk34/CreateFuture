@@ -14,6 +14,7 @@ class CharactersViewController: UIViewController, UISearchControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(viewDidLoad)
         overrideUserInterfaceStyle = .dark
         setupSearchController()
         
@@ -34,8 +35,11 @@ class CharactersViewController: UIViewController, UISearchControllerDelegate {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
         searchController.searchBar.tintColor = .white
+<<<<<<< Updated upstream
         searchController.searchBar.searchTextField.tintColor = .white
         searchController.searchBar.searchTextField.backgroundColor = .lightGray
+=======
+>>>>>>> Stashed changes
         
         navigationItem.searchController = searchController
         definesPresentationContext = false
