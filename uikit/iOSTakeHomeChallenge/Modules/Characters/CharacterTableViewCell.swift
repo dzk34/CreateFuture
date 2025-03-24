@@ -15,10 +15,13 @@ class CharacterTableViewCell: UITableViewCell {
         cultureLabel.text = character.culture
         bornLabel.text = character.born
         diedLabel.text = character.died
-
+        seasonLabel.text = formatTvSeasons(tvSeries: character.tvSeries)
+    }
+    
+    func formatTvSeasons(tvSeries: [String]) -> String {
         var seasons = ""
 
-        for season in character.tvSeries { //improve
+        for season in tvSeries {
             if season == "Season 1" {
                 seasons.append("I ")
             } else if season == "Season 2" {
@@ -38,6 +41,10 @@ class CharacterTableViewCell: UITableViewCell {
             }
         }
 
-        seasonLabel.text = seasons
+        if (seasons.suffix(2) == ", ") {
+            seasons.removeLast(2)
+        }
+
+        return seasons
     }
 }
