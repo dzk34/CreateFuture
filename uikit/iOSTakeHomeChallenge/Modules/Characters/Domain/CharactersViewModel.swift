@@ -15,7 +15,7 @@ protocol CharactersViewModelProtocol {
     // closure based
     func getCharactersClosureBased()
     
-    func search(searchText: String)
+    func search(text: String)
 }
 
 class CharactersViewModel: ObservableObject, CharactersViewModelProtocol {
@@ -47,11 +47,11 @@ class CharactersViewModel: ObservableObject, CharactersViewModelProtocol {
         }
     }
     
-    func search(searchText: String) {
-        if searchText == "" {
+    func search(text: String) {
+        if text == "" {
             characters = fetchedCharacters
         } else {
-            characters = fetchedCharacters.filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+            characters = fetchedCharacters.filter({ $0.name.lowercased().contains(text.lowercased()) })
         }
     }
 }

@@ -25,6 +25,10 @@ private struct APIManagerKey: InjectedServiceKey {
     static var currentValue: APIManagerProtocol = APIManager()
 }
 
+private struct URLSessionKey: InjectedServiceKey {
+    static var currentValue: URLSession = URLSession.shared
+}
+
 // MARK: Injected Mocked Services
 
 
@@ -47,5 +51,10 @@ extension InjectedServiceValues {
     var apiManager: APIManagerProtocol {
         get { Self[APIManagerKey.self] }
         set { Self[APIManagerKey.self] = newValue }
+    }
+    
+    var urlSession: URLSession {
+        get { Self[URLSessionKey.self] }
+        set { Self[URLSessionKey.self] = newValue }
     }
 }

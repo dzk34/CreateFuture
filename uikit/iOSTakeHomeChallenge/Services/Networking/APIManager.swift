@@ -12,12 +12,8 @@ protocol APIManagerProtocol {
 }
 
 class APIManager: APIManagerProtocol {
-    private let urlSession: URLSession
+    @Inject(\.urlSession) var urlSession: URLSession
 
-    init(urlSession: URLSession = URLSession.shared) { //no default value
-        self.urlSession = urlSession
-    }
-    
     func perform(_ request: RequestProtocol) async throws -> Data {
         let (data, response) = try await urlSession.data(for: request.createURLRequest())
 

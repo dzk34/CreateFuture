@@ -30,16 +30,16 @@ class CharactersViewController: UIViewController, UISearchControllerDelegate {
     }
 
     func setupSearchController() {
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search"
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
         
-        self.navigationItem.searchController = searchController
-        self.definesPresentationContext = false
-        self.navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = false
+        navigationItem.hidesSearchBarWhenScrolling = false
         
-        self.searchController.delegate = self
-        self.searchController.searchBar.delegate = self
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
     }
 }
 
@@ -50,7 +50,7 @@ extension CharactersViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterTableViewCell") as! CharacterTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: UIConstants.characterTableViewCell) as! CharacterTableViewCell
         cell.setupWith(character: viewModel.characters[indexPath.row])
         return cell
     }
@@ -59,12 +59,12 @@ extension CharactersViewController: UITableViewDataSource {
 // MARK: - Search Component
 extension CharactersViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.search(searchText: searchText)
+        viewModel.search(text: searchText)
         tableView.reloadData()
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        viewModel.search(searchText: "")
+        viewModel.search(text: "")
         tableView.reloadData()
     }
 }

@@ -13,6 +13,7 @@
 		117E699D25F7A21F00E313E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117E699C25F7A21F00E313E3 /* Assets.xcassets */; };
 		117E69A025F7A21F00E313E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E699E25F7A21F00E313E3 /* LaunchScreen.storyboard */; };
 		117E69AF25F7A3B600E313E3 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */; };
+		298DA43F2D9180060071A217 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298DA43E2D9180060071A217 /* Constants.swift */; };
 		29BCA0B72D8B4987002607B0 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCA0B62D8B4987002607B0 /* CharactersViewModel.swift */; };
 		29BCA0B92D8B5855002607B0 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCA0B82D8B5855002607B0 /* ServiceContainer.swift */; };
 		29BCA0BB2D8B5876002607B0 /* ServiceInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCA0BA2D8B5876002607B0 /* ServiceInjection.swift */; };
@@ -35,6 +36,7 @@
 		117E699F25F7A21F00E313E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		117E69A125F7A21F00E313E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		298DA43E2D9180060071A217 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		29BCA0B62D8B4987002607B0 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		29BCA0B82D8B5855002607B0 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
 		29BCA0BA2D8B5876002607B0 /* ServiceInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInjection.swift; sourceTree = "<group>"; };
@@ -91,16 +93,51 @@
 			path = iOSTakeHomeChallenge;
 			sourceTree = "<group>";
 		};
-		29BCA0B52D8B4954002607B0 /* Services */ = {
+		298DA4402D9182390071A217 /* Injection */ = {
 			isa = PBXGroup;
 			children = (
 				29BCA0B82D8B5855002607B0 /* ServiceContainer.swift */,
 				29BCA0BA2D8B5876002607B0 /* ServiceInjection.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		298DA4412D9182860071A217 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				29D35DF42D90B69F00D5F887 /* APIManager.swift */,
+				29D35DF22D90B37C00D5F887 /* DataParser.swift */,
 				29BCA0BC2D8B59CC002607B0 /* NetworkService.swift */,
 				29BCA0BE2D8B5A50002607B0 /* RequestProtocol.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		298DA4422D91855C0071A217 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */,
+				B0BE622B2820293F00908229 /* CharacterTableViewCell.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		298DA4432D91857C0071A217 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				29BCA0C22D8B5B6B002607B0 /* CharactersRequest.swift */,
+				29BCA0B62D8B4987002607B0 /* CharactersViewModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		29BCA0B52D8B4954002607B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				298DA4412D9182860071A217 /* Networking */,
+				298DA4402D9182390071A217 /* Injection */,
+				298DA43E2D9180060071A217 /* Constants.swift */,
 				29BCA0C42D8B5C1A002607B0 /* RequestManager.swift */,
-				29D35DF22D90B37C00D5F887 /* DataParser.swift */,
-				29D35DF42D90B69F00D5F887 /* APIManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -116,10 +153,8 @@
 		B0BE6226282028AF00908229 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
-				117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */,
-				B0BE622B2820293F00908229 /* CharacterTableViewCell.swift */,
-				29BCA0B62D8B4987002607B0 /* CharactersViewModel.swift */,
-				29BCA0C22D8B5B6B002607B0 /* CharactersRequest.swift */,
+				298DA4432D91857C0071A217 /* Domain */,
+				298DA4422D91855C0071A217 /* Presentation */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -207,6 +242,7 @@
 				29BCA0B92D8B5855002607B0 /* ServiceContainer.swift in Sources */,
 				29BCA0C52D8B5C1A002607B0 /* RequestManager.swift in Sources */,
 				117E699425F7A21E00E313E3 /* AppDelegate.swift in Sources */,
+				298DA43F2D9180060071A217 /* Constants.swift in Sources */,
 				29BCA0BD2D8B59CC002607B0 /* NetworkService.swift in Sources */,
 				29D35DF52D90B69F00D5F887 /* APIManager.swift in Sources */,
 				B0BE622C2820293F00908229 /* CharacterTableViewCell.swift in Sources */,
