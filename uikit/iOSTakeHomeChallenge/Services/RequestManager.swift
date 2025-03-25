@@ -20,6 +20,7 @@ class RequestManager: RequestManagerProtocol {
     @Inject(\.dataParser) var dataParser: DataParserProtocol
 
     func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T {
+        print("dzk3")
         let data = try await apiManager.perform(request)
         
         let decoded: T = try dataParser.parse(data: data)

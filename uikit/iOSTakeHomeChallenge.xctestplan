@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "D1539AF4-B7E1-4975-8ABE-306BFEA05976",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:iOSTakeHomeChallenge.xcodeproj",
+      "identifier" : "117E698F25F7A21E00E313E3",
+      "name" : "iOSTakeHomeChallenge"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:iOSTakeHomeChallenge.xcodeproj",
+        "identifier" : "298DA4472D9189B30071A217",
+        "name" : "iOSTakeHomeChallengeTests"
+      }
+    }
+  ],
+  "version" : 1
+}

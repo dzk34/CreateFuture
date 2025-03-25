@@ -14,6 +14,7 @@ class CharactersViewController: UIViewController, UISearchControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(viewDidLoad)
         overrideUserInterfaceStyle = .dark
         setupSearchController()
         
