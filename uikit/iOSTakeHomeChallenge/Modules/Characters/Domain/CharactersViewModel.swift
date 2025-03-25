@@ -25,7 +25,6 @@ class CharactersViewModel: ObservableObject, CharactersViewModelProtocol {
 
     func getCharacters() async {
         do {
-            print(getCharacters)
             let requestData = CharactersRequestProtocol.charactersList
             let characters: [Character] = try await requestManager.perform(requestData)
             self.characters = characters

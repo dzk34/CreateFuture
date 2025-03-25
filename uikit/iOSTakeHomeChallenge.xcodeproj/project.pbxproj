@@ -29,6 +29,9 @@
 		29CAD6832D92AD3A0093F451 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CAD6822D92AD3A0093F451 /* characters.json */; };
 		29CAD6852D92AD8B0093F451 /* CharactersRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAD6842D92AD8B0093F451 /* CharactersRequestMock.swift */; };
 		29CAD6892D92B1130093F451 /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAD6882D92B1130093F451 /* CharactersViewModelTests.swift */; };
+		29CAD68B2D92BB480093F451 /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAD68A2D92BB480093F451 /* URLSessionProtocolMock.swift */; };
+		29CAD68D2D92BC320093F451 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAD68C2D92BC320093F451 /* URLSessionProtocol.swift */; };
+		29CAD68F2D92BF5D0093F451 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CAD6822D92AD3A0093F451 /* characters.json */; };
 		29D35DF32D90B37C00D5F887 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D35DF22D90B37C00D5F887 /* DataParser.swift */; };
 		29D35DF52D90B69F00D5F887 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D35DF42D90B69F00D5F887 /* APIManager.swift */; };
 		B0BE6229282028D300908229 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE6228282028D300908229 /* Character.swift */; };
@@ -71,6 +74,8 @@
 		29CAD6822D92AD3A0093F451 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 		29CAD6842D92AD8B0093F451 /* CharactersRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRequestMock.swift; sourceTree = "<group>"; };
 		29CAD6882D92B1130093F451 /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
+		29CAD68A2D92BB480093F451 /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
+		29CAD68C2D92BC320093F451 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		29D35DF22D90B37C00D5F887 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		29D35DF42D90B69F00D5F887 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B0BE6228282028D300908229 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -145,6 +150,7 @@
 				29D35DF22D90B37C00D5F887 /* DataParser.swift */,
 				29BCA0BC2D8B59CC002607B0 /* NetworkService.swift */,
 				29BCA0BE2D8B5A50002607B0 /* RequestProtocol.swift */,
+				29CAD68C2D92BC320093F451 /* URLSessionProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -170,12 +176,9 @@
 		298DA4492D9189B30071A217 /* iOSTakeHomeChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				29CAD68E2D92BDBE0093F451 /* Mocks */,
 				298DA44A2D9189B30071A217 /* iOSTakeHomeChallengeTests.swift */,
-				298DA4512D918A9E0071A217 /* MockServiceContainer.swift */,
 				2981E45D2D91FF510065F961 /* RequestManagerTests.swift */,
-				2981E45F2D91FF730065F961 /* RequestManagerMock.swift */,
-				2981E4612D9205FD0065F961 /* APIManagerMock.swift */,
-				29CAD6842D92AD8B0093F451 /* CharactersRequestMock.swift */,
 				29CAD6882D92B1130093F451 /* CharactersViewModelTests.swift */,
 			);
 			path = iOSTakeHomeChallengeTests;
@@ -191,6 +194,18 @@
 				29BCA0C42D8B5C1A002607B0 /* RequestManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		29CAD68E2D92BDBE0093F451 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2981E4612D9205FD0065F961 /* APIManagerMock.swift */,
+				29CAD6842D92AD8B0093F451 /* CharactersRequestMock.swift */,
+				298DA4512D918A9E0071A217 /* MockServiceContainer.swift */,
+				2981E45F2D91FF730065F961 /* RequestManagerMock.swift */,
+				29CAD68A2D92BB480093F451 /* URLSessionProtocolMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B0BE6225282028A500908229 /* Modules */ = {
@@ -309,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CAD68F2D92BF5D0093F451 /* characters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +347,7 @@
 				29BCA0BB2D8B5876002607B0 /* ServiceInjection.swift in Sources */,
 				117E699625F7A21E00E313E3 /* SceneDelegate.swift in Sources */,
 				29BCA0C32D8B5B6B002607B0 /* CharactersRequest.swift in Sources */,
+				29CAD68D2D92BC320093F451 /* URLSessionProtocol.swift in Sources */,
 				29D35DF32D90B37C00D5F887 /* DataParser.swift in Sources */,
 				B0BE6229282028D300908229 /* Character.swift in Sources */,
 				29BCA0BF2D8B5A50002607B0 /* RequestProtocol.swift in Sources */,
@@ -343,6 +360,7 @@
 			files = (
 				2981E4622D9205FD0065F961 /* APIManagerMock.swift in Sources */,
 				298DA44B2D9189B30071A217 /* iOSTakeHomeChallengeTests.swift in Sources */,
+				29CAD68B2D92BB480093F451 /* URLSessionProtocolMock.swift in Sources */,
 				2981E4602D91FF730065F961 /* RequestManagerMock.swift in Sources */,
 				29CAD6852D92AD8B0093F451 /* CharactersRequestMock.swift in Sources */,
 				29CAD6892D92B1130093F451 /* CharactersViewModelTests.swift in Sources */,

@@ -12,7 +12,7 @@ protocol APIManagerProtocol {
 }
 
 class APIManager: APIManagerProtocol {
-    @Inject(\.urlSession) var urlSession: URLSession
+    @Inject(\.urlSession) var urlSession: URLSessionProtocol
 
     func perform(_ request: RequestProtocol) async throws -> Data {
         let (data, response) = try await urlSession.data(for: request.createURLRequest())
