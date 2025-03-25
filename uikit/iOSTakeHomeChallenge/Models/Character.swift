@@ -3,7 +3,7 @@
 import Foundation
 
 struct CharactersList: Codable {
-    let charactersList: [Character]
+    let characters: [Character]
 }
 
 struct Character: Codable {

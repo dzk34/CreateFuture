@@ -23,8 +23,8 @@ final class RequestManagerTests: XCTestCase {
             return
         }
         
-        let first = data.charactersList.first
-        let last = data.charactersList.last
+        let first = data.characters.first
+        let last = data.characters.last
         
         XCTAssertEqual(first?.name, "Eddard Stark")
 

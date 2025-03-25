@@ -28,6 +28,7 @@
 		29BCA0C52D8B5C1A002607B0 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCA0C42D8B5C1A002607B0 /* RequestManager.swift */; };
 		29CAD6832D92AD3A0093F451 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CAD6822D92AD3A0093F451 /* characters.json */; };
 		29CAD6852D92AD8B0093F451 /* CharactersRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAD6842D92AD8B0093F451 /* CharactersRequestMock.swift */; };
+		29CAD6892D92B1130093F451 /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CAD6882D92B1130093F451 /* CharactersViewModelTests.swift */; };
 		29D35DF32D90B37C00D5F887 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D35DF22D90B37C00D5F887 /* DataParser.swift */; };
 		29D35DF52D90B69F00D5F887 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D35DF42D90B69F00D5F887 /* APIManager.swift */; };
 		B0BE6229282028D300908229 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE6228282028D300908229 /* Character.swift */; };
@@ -69,6 +70,7 @@
 		29BCA0C42D8B5C1A002607B0 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		29CAD6822D92AD3A0093F451 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 		29CAD6842D92AD8B0093F451 /* CharactersRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRequestMock.swift; sourceTree = "<group>"; };
+		29CAD6882D92B1130093F451 /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
 		29D35DF22D90B37C00D5F887 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		29D35DF42D90B69F00D5F887 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		B0BE6228282028D300908229 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				2981E45F2D91FF730065F961 /* RequestManagerMock.swift */,
 				2981E4612D9205FD0065F961 /* APIManagerMock.swift */,
 				29CAD6842D92AD8B0093F451 /* CharactersRequestMock.swift */,
+				29CAD6882D92B1130093F451 /* CharactersViewModelTests.swift */,
 			);
 			path = iOSTakeHomeChallengeTests;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				298DA44B2D9189B30071A217 /* iOSTakeHomeChallengeTests.swift in Sources */,
 				2981E4602D91FF730065F961 /* RequestManagerMock.swift in Sources */,
 				29CAD6852D92AD8B0093F451 /* CharactersRequestMock.swift in Sources */,
+				29CAD6892D92B1130093F451 /* CharactersViewModelTests.swift in Sources */,
 				298DA4522D918A9E0071A217 /* MockServiceContainer.swift in Sources */,
 				2981E45E2D91FF510065F961 /* RequestManagerTests.swift in Sources */,
 			);
