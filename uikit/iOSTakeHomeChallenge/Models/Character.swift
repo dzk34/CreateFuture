@@ -2,6 +2,10 @@
 
 import Foundation
 
+struct CharactersList: Codable {
+    let charactersList: [Character]
+}
+
 struct Character: Codable {
     let name: String
     let gender: String
