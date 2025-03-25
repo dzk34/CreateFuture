@@ -26,7 +26,7 @@ private struct APIManagerKey: InjectedServiceKey {
 }
 
 private struct URLSessionKey: InjectedServiceKey {
-    static var currentValue: URLSession = URLSession.shared
+    static var currentValue: URLSessionProtocol = URLSession(configuration: .default)
 }
 
 
@@ -51,7 +51,7 @@ extension InjectedServiceValues {
         set { Self[APIManagerKey.self] = newValue }
     }
     
-    var urlSession: URLSession {
+    var urlSession: URLSessionProtocol {
         get { Self[URLSessionKey.self] }
         set { Self[URLSessionKey.self] = newValue }
     }

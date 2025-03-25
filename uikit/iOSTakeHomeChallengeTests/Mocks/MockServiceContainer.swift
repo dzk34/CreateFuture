@@ -29,15 +29,3 @@ extension InjectedServiceValues {
         set { Self[RequestManagerMockKey.self] = newValue }
     }
 }
-
-//private struct CharactersViewModelMockKey: InjectedServiceKey {
-//    static var currentValue: CharactersViewModelProtocol = CharactersViewModelMock()
-//}
-//
-//
-//extension InjectedServiceValues {
-//    var charactersViewModelMock: CharactersViewModelProtocol {
-//        get { Self[CharactersViewModelMockKey.self] }
-//        set { Self[CharactersViewModelMockKey.self] = newValue }
-//    }
-//}

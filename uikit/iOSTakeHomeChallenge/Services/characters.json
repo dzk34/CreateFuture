@@ -1,5 +1,22 @@
 {
-    "charactersList": [
+    "characters": [
+        {
+            "name": "name1",
+            "gender": "gender",
+            "culture": "culture",
+            "born": "born",
+            "died": "died",
+            "aliases": [],
+            "tvSeries": [
+                "Season 1",
+                "Season 6"
+            ],
+            "playedBy": [
+                "actor1",
+                "actor2",
+                "actor3"
+            ]
+        },
         {
             "name": "Eddard Stark",
             "gender": "Male",
@@ -69,6 +86,23 @@
             ],
             "playedBy": [
                 "Michelle Fairley"
+            ]
+        },
+        {
+            "name": "name2",
+            "gender": "gender2",
+            "culture": "culture",
+            "born": "born",
+            "died": "died",
+            "aliases": [],
+            "tvSeries": [
+                "Season 2",
+                "Season 3"
+            ],
+            "playedBy": [
+                "actor1",
+                "actor2",
+                "actor3"
             ]
         }
     ]
